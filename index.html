@@ -206,7 +206,7 @@
 						<pre><code class="hljs scala" data-trim>
 							val results = ratings
 									.map(r => (r, 1))
-									.reduceByKey((_ + _))
+									.reduceByKey(_ + _)
 									.collect()
 						</code></pre>
 						<div class="tables-wrapper">
@@ -332,7 +332,6 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
